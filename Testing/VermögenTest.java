@@ -2,19 +2,19 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
-class VermögenTest {
+class VermÃ¶genTest {
 
-	Vermögen v;
+	VermÃ¶gen v;
 
 	@Test
-	void testvermögenNachGehalt() {
+	void testvermÃ¶genNachGehalt() {
 		Steuern KB = mock(Steuern.class); // dyn Proxy
 
 		when(KB.Steuerrechner(2000)).thenReturn(1000);// DSL(Domain Specific Language)
 
-		v = new Vermögen(KB);//Übergebe Mock
+		v = new VermÃ¶gen(KB);//Ãœbergebe Mock
 		
-		assertEquals(1100, v.vermögenNachGehalt(100));
+		assertEquals(1100, v.vermÃ¶genNachGehalt(100));
 
 	}
 
